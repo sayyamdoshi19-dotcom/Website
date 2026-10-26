@@ -1,0 +1,9 @@
+# Dependencies & Binaries
+tailwindcss.exe
+*.log
+.DS_Store
+Thumbs.db
+
+# Temporary build scripts & backups
+compress_hero_images.ps1
+assets/images/originals_backup/

@@ -1,0 +1,106 @@
+<form class="space-y-6" id="enquiryForm" novalidate>
+  <!-- 1. Full Name & Email Address -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+    <div class="space-y-1.5">
+      <label class="block font-label-md text-label-md uppercase text-on-surface-variant tracking-wider" for="fullName">
+        Full Name <span class="text-secondary font-bold">*</span>
+      </label>
+      <input class="w-full bg-surface-container-low text-on-surface px-4 py-3 rounded text-body-md placeholder:text-outline-variant/70 focus:outline-none focus:bg-surface-container-lowest focus:ring-1 focus:ring-primary shadow-inner transition-colors" id="fullName" name="fullName" placeholder="e.g. Radhika Sharma" required type="text"/>
+    </div>
+    <div class="space-y-1.5">
+      <label class="block font-label-md text-label-md uppercase text-on-surface-variant tracking-wider" for="emailAddress">
+        Email Address <span class="text-secondary font-bold">*</span>
+      </label>
+      <input class="w-full bg-surface-container-low text-on-surface px-4 py-3 rounded text-body-md placeholder:text-outline-variant/70 focus:outline-none focus:bg-surface-container-lowest focus:ring-1 focus:ring-primary shadow-inner transition-colors" id="emailAddress" name="emailAddress" placeholder="e.g. patron@example.com" required type="email"/>
+    </div>
+  </div>
+
+  <!-- 2. Phone Number -->
+  <div class="space-y-1.5">
+    <label class="block font-label-md text-label-md uppercase text-on-surface-variant tracking-wider" for="phoneNumber">
+      Phone Number <span class="text-secondary font-bold">*</span>
+    </label>
+    <div class="relative">
+      <input class="w-full bg-surface-container-low text-on-surface px-4 py-3 rounded text-body-md placeholder:text-outline-variant/70 focus:outline-none focus:bg-surface-container-lowest focus:ring-1 focus:ring-primary shadow-inner transition-colors" id="phoneNumber" name="phoneNumber" placeholder="+91 94265 57390 or 10-digit mobile number" required type="tel"/>
+    </div>
+    <p class="text-[11px] text-tertiary">Used for encrypted WhatsApp or voice consultation callback.</p>
+  </div>
+
+  <!-- 3. Enquiry Type & Jewellery Category -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+    <!-- Enquiry Type (10 exact requested options) -->
+    <div class="space-y-1.5">
+      <label class="block font-label-md text-label-md uppercase text-on-surface-variant tracking-wider" for="enquiryType">
+        Enquiry Type <span class="text-secondary font-bold">*</span>
+      </label>
+      <div class="relative">
+        <select class="w-full appearance-none bg-surface-container-low text-on-surface px-4 py-3 pr-10 rounded text-body-md focus:outline-none focus:bg-surface-container-lowest focus:ring-1 focus:ring-primary shadow-inner cursor-pointer" id="enquiryType" name="enquiryType">
+          <option value="General Enquiry">General Enquiry</option>
+          <option value="Gold Jewellery">Gold Jewellery</option>
+          <option value="Bridal Jewellery">Bridal Jewellery</option>
+          <option value="Necklace Sets">Necklace Sets</option>
+          <option value="Earrings">Earrings</option>
+          <option value="Rings">Rings</option>
+          <option value="Bangles and Bracelets">Bangles and Bracelets</option>
+          <option value="Product Pricing">Product Pricing</option>
+          <option value="Custom Jewellery">Custom Jewellery</option>
+          <option value="Order Support">Order Support</option>
+        </select>
+        <span class="material-symbols-outlined pointer-events-none absolute right-3 top-3 text-[20px] text-primary">expand_more</span>
+      </div>
+    </div>
+
+    <!-- Jewellery Category -->
+    <div class="space-y-1.5">
+      <label class="block font-label-md text-label-md uppercase text-on-surface-variant tracking-wider" for="jewelleryCategory">
+        Jewellery Category <span class="text-secondary font-bold">*</span>
+      </label>
+      <div class="relative">
+        <select class="w-full appearance-none bg-surface-container-low text-on-surface px-4 py-3 pr-10 rounded text-body-md focus:outline-none focus:bg-surface-container-lowest focus:ring-1 focus:ring-primary shadow-inner cursor-pointer" id="jewelleryCategory" name="jewelleryCategory">
+          <option value="Gold Necklaces">Gold Necklaces &amp; Chokers</option>
+          <option value="Bridal Jewellery">Bridal Jewellery Suites</option>
+          <option value="Earrings">Earrings &amp; Chandbalis</option>
+          <option value="Bangles and Bracelets">Bangles and Bracelets</option>
+          <option value="Rings">Rings &amp; Signets</option>
+          <option value="Traditional Jewellery">Traditional Temple Jewellery</option>
+          <option value="Contemporary Jewellery">Contemporary Jewellery</option>
+        </select>
+        <span class="material-symbols-outlined pointer-events-none absolute right-3 top-3 text-[20px] text-primary">expand_more</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. Budget Range (Optional) -->
+  <div class="space-y-1.5">
+    <label class="block font-label-md text-label-md uppercase text-on-surface-variant tracking-wider" for="budgetRange">
+      Budget Range <span class="text-tertiary text-xs normal-case">(Optional)</span>
+    </label>
+    <div class="relative">
+      <select class="w-full appearance-none bg-surface-container-low text-on-surface px-4 py-3 pr-10 rounded text-body-md focus:outline-none focus:bg-surface-container-lowest focus:ring-1 focus:ring-primary shadow-inner cursor-pointer" id="budgetRange" name="budgetRange">
+        <option value="">Flexible / To Be Discussed</option>
+        <option value="Under ₹1,00,000">Under ₹1,00,000</option>
+        <option value="₹1,00,000 – ₹2,50,000">₹1,00,000 – ₹2,50,000</option>
+        <option value="₹2,50,000 – ₹5,00,000">₹2,50,000 – ₹5,00,000</option>
+        <option value="Above ₹5,00,000">Above ₹5,00,000</option>
+      </select>
+      <span class="material-symbols-outlined pointer-events-none absolute right-3 top-3 text-[20px] text-primary">expand_more</span>
+    </div>
+  </div>
+
+  <!-- 5. Message -->
+  <div class="space-y-1.5">
+    <label class="block font-label-md text-label-md uppercase text-on-surface-variant tracking-wider" for="messageBody">
+      Message <span class="text-secondary font-bold">*</span>
+    </label>
+    <textarea class="w-full bg-surface-container-low text-on-surface px-4 py-3 rounded text-body-md placeholder:text-outline-variant/70 focus:outline-none focus:bg-surface-container-lowest focus:ring-1 focus:ring-primary shadow-inner transition-colors resize-y min-h-[120px]" id="messageBody" name="messageBody" placeholder="Please specify your design requirements, metal preferences, gold purity (22K/18K), or event timeline..." required></textarea>
+  </div>
+
+  <!-- Submit Enquiry Button -->
+  <button class="w-full py-4 bg-primary-container text-on-primary-container hover:bg-secondary hover:text-on-secondary font-label-lg text-label-lg tracking-[0.2em] uppercase transition-all duration-300 shadow-md flex items-center justify-center gap-2 group cursor-pointer" id="submitBtn" type="submit">
+    <span>Submit Enquiry</span>
+    <span class="material-symbols-outlined text-base transition-transform group-hover:translate-x-1">arrow_forward</span>
+  </button>
+
+  <!-- Clear Feedback Message Area -->
+  <div class="hidden p-5 rounded-lg bg-surface-container-low border border-primary-container/40" id="formFeedback"></div>
+</form>

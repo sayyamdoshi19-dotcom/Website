@@ -1,0 +1,237 @@
+<!-- Royal Golden Scroll Progress Indicator -->
+<div id="scrollProgress" class="fixed top-0 left-0 h-[3px] bg-gradient-to-r from-[#914852] via-[#c6a15b] to-[#ffdea5] z-[100] transition-all duration-75 pointer-events-none" style="width: 0%;"></div>
+
+<!-- Mobile Navigation Drawer -->
+<div id="mobileNavBackdrop" class="fixed inset-0 bg-on-surface/60 backdrop-blur-sm z-50 hidden transition-opacity"></div>
+<aside id="mobileNavDrawer" class="fixed top-0 left-0 bottom-0 w-80 max-w-[85vw] bg-surface-container-lowest z-50 shadow-2xl transform -translate-x-full transition-transform duration-300 ease-out flex flex-col justify-between p-6 overflow-y-auto">
+  <div class="space-y-6">
+    <div class="flex items-center justify-between pb-4 border-b border-surface-container-high">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-full p-0.5 bg-gradient-to-tr from-[#914852] via-[#c6a15b] to-[#ffdea5] shadow-sm shrink-0">
+          <img alt="PRINCESS JEWELS Royal Emblem" class="w-full h-full object-cover rounded-full bg-[#141210]" src="assets/images/princess_jewels_medallion.png"/>
+        </div>
+        <div class="flex flex-col">
+          <span class="font-headline-sm text-base text-secondary tracking-[0.16em] uppercase font-bold leading-none">PRINCESS JEWELS</span>
+          <span class="font-label-sm text-[8px] tracking-[0.24em] text-primary uppercase mt-1">THE ART OF GOLDEN ELEGANCE</span>
+        </div>
+      </div>
+      <button id="mobileNavClose" class="p-2 text-on-surface-variant hover:text-primary transition-colors" aria-label="Close Navigation">
+        <span class="material-symbols-outlined text-[24px]">close</span>
+      </button>
+    </div>
+
+    <nav class="space-y-3 font-label-lg text-label-lg uppercase tracking-[0.16em]">
+      <a href="index.html" class="block py-2.5 px-3 rounded text-on-surface hover:bg-surface-container-low hover:text-primary transition-colors">Home</a>
+      <a href="products.html" class="block py-2.5 px-3 rounded text-on-surface hover:bg-surface-container-low hover:text-primary transition-colors">Collections</a>
+      <a href="bridal.html" class="block py-2.5 px-3 rounded text-on-surface hover:bg-surface-container-low hover:text-primary transition-colors">Bridal Jewellery</a>
+      <a href="about.html" class="block py-2.5 px-3 rounded text-on-surface hover:bg-surface-container-low hover:text-primary transition-colors">About Us</a>
+      <a href="contact.html" class="block py-2.5 px-3 rounded text-on-surface hover:bg-surface-container-low hover:text-primary transition-colors">Contact Us</a>
+    </nav>
+  </div>
+
+  <div class="pt-6 border-t border-surface-container-high space-y-3 text-sm">
+    <a href="tel:+919426557390" class="flex items-center gap-3 p-3 rounded bg-surface-container-low text-on-surface hover:text-primary transition-colors">
+      <span class="material-symbols-outlined text-primary text-[20px]">call</span>
+      <div>
+        <span class="font-label-sm text-[10px] text-tertiary uppercase tracking-wider block">Direct Phone</span>
+        <span class="font-semibold">+91 94265 57390</span>
+      </div>
+    </a>
+    <a href="https://wa.me/919426557390?text=Hello%20PRINCESS%20JEWELS%2C%20I%20am%20interested%20in%20your%20jewellery%20collections.%20Please%20share%20more%20details." target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 p-3 rounded bg-[#2E7D32]/10 text-[#2E7D32] hover:bg-[#2E7D32]/20 transition-colors">
+      <span class="material-symbols-outlined text-[20px]">chat</span>
+      <div>
+        <span class="font-label-sm text-[10px] uppercase tracking-wider block">WhatsApp Concierge</span>
+        <span class="font-semibold">+91 94265 57390</span>
+      </div>
+    </a>
+    <a href="mailto:parshwaexport108@gmail.com" class="flex items-center gap-3 p-3 rounded bg-surface-container-low text-on-surface hover:text-primary transition-colors">
+      <span class="material-symbols-outlined text-primary text-[20px]">mail</span>
+      <div class="truncate">
+        <span class="font-label-sm text-[10px] text-tertiary uppercase tracking-wider block">Email Us</span>
+        <span class="font-semibold text-xs">parshwaexport108@gmail.com</span>
+      </div>
+    </a>
+  </div>
+</aside>
+
+<!-- Shopping Bag Drawer -->
+<div id="cartBackdrop" class="fixed inset-0 bg-on-surface/60 backdrop-blur-sm z-50 hidden transition-opacity"></div>
+<aside id="cartDrawer" class="fixed top-0 right-0 bottom-0 w-96 max-w-[90vw] bg-surface-container-lowest z-50 shadow-2xl transform translate-x-full transition-transform duration-300 ease-out flex flex-col justify-between p-6">
+  <div>
+    <div class="flex items-center justify-between pb-4 border-b border-surface-container-high">
+      <div class="flex items-center gap-2">
+        <span class="material-symbols-outlined text-primary text-[22px]">shopping_bag</span>
+        <h3 class="font-headline-sm text-title-lg text-on-surface">Your Jewellery Bag</h3>
+      </div>
+      <button id="closeCartDrawer" class="p-1.5 text-on-surface-variant hover:text-primary transition-colors" aria-label="Close Bag">
+        <span class="material-symbols-outlined text-[22px]">close</span>
+      </button>
+    </div>
+    <div id="cartItemsList" class="divide-y divide-surface-container-high overflow-y-auto max-h-[60vh] mt-2"></div>
+  </div>
+
+  <div class="pt-5 border-t border-surface-container-high space-y-3">
+    <div class="flex items-center justify-between font-headline-sm text-base">
+      <span class="text-on-surface">Estimated Subtotal:</span>
+      <span id="cartSubtotal" class="text-primary font-bold">&#8377;0</span>
+    </div>
+    <p class="font-body-sm text-[11px] text-tertiary leading-tight">
+      BIS 916 Hallmarked 22K Gold&nbsp;·&nbsp;Sample prices until verified inventory.
+    </p>
+    <a id="cartWhatsAppCheckout" href="https://wa.me/919426557390?text=Hello%20PRINCESS%20JEWELS%2C%20I%20am%20interested%20in%20ordering%20the%20pieces%20in%20my%20bag." target="_blank" rel="noopener noreferrer" class="w-full py-3.5 bg-gradient-to-r from-[#1E4D2B] to-[#2E7D32] text-white rounded font-label-lg text-label-lg uppercase tracking-[0.16em] flex items-center justify-center gap-2 shadow hover:opacity-95 transition-opacity">
+      <span class="material-symbols-outlined text-[18px]">chat</span>
+      <span>Enquire on WhatsApp</span>
+    </a>
+    <a href="tel:+919426557390" class="w-full py-2.5 bg-surface-container-high text-on-surface rounded font-label-md text-label-md uppercase tracking-wider text-center block hover:bg-surface-container-highest transition-colors">
+      Call Concierge (+91 94265 57390)
+    </a>
+  </div>
+</aside>
+
+<!-- Wishlist Drawer -->
+<div id="wishlistBackdrop" class="fixed inset-0 bg-on-surface/60 backdrop-blur-sm z-50 hidden transition-opacity"></div>
+<aside id="wishlistDrawer" class="fixed top-0 right-0 bottom-0 w-96 max-w-[90vw] bg-surface-container-lowest z-50 shadow-2xl transform translate-x-full transition-transform duration-300 ease-out flex flex-col justify-between p-6">
+  <div>
+    <div class="flex items-center justify-between pb-4 border-b border-surface-container-high">
+      <div class="flex items-center gap-2">
+        <span class="material-symbols-outlined text-secondary text-[22px]">favorite</span>
+        <h3 class="font-headline-sm text-title-lg text-on-surface">Curated Wishlist</h3>
+      </div>
+      <button id="closeWishlistDrawer" class="p-1.5 text-on-surface-variant hover:text-primary transition-colors" aria-label="Close Wishlist">
+        <span class="material-symbols-outlined text-[22px]">close</span>
+      </button>
+    </div>
+    <div id="wishlistItemsList" class="divide-y divide-surface-container-high overflow-y-auto max-h-[65vh] mt-2"></div>
+  </div>
+  <div class="pt-4 border-t border-surface-container-high">
+    <a href="products.html" class="w-full py-3 bg-primary-container text-on-primary-container rounded font-label-md uppercase tracking-wider text-center block hover:bg-secondary hover:text-on-secondary transition-colors">
+      Explore All Jewellery
+    </a>
+  </div>
+</aside>
+
+<!-- Search Modal -->
+<div id="searchModal" class="fixed inset-0 bg-on-surface/70 backdrop-blur-md z-50 hidden flex items-start justify-center pt-20 p-4">
+  <div class="bg-surface-container-lowest max-w-2xl w-full rounded-xl shadow-2xl p-6 space-y-5 relative">
+    <div class="flex items-center justify-between pb-3 border-b border-surface-container-high">
+      <span class="font-label-md uppercase tracking-widest text-primary text-xs">Catalogue Search</span>
+      <button id="closeSearchModal" class="p-1 text-on-surface-variant hover:text-primary">
+        <span class="material-symbols-outlined text-[20px]">close</span>
+      </button>
+    </div>
+    <div class="relative">
+      <input id="siteSearchInput" type="text" placeholder="Search by gold jewellery name, karat, chokers, bangles, bridal..." class="w-full pl-11 pr-4 py-3.5 bg-surface-container-low text-on-surface rounded-lg font-body-md focus:outline-none focus:bg-surface-container-lowest focus:ring-1 focus:ring-primary-container shadow-inner" />
+      <span class="material-symbols-outlined absolute left-3.5 top-3.5 text-primary text-[22px]">search</span>
+    </div>
+    <div id="searchResultsList" class="max-h-80 overflow-y-auto space-y-1 divide-y divide-surface-container-high/40"></div>
+  </div>
+</div>
+
+<!-- Quick View Modal -->
+<div id="quickViewModal" class="fixed inset-0 z-50 hidden bg-on-surface/65 backdrop-blur-sm flex items-center justify-center p-4">
+  <div class="bg-surface-container-lowest rounded-xl max-w-3xl w-full shadow-2xl overflow-hidden relative max-h-[90vh] flex flex-col md:flex-row">
+    <button aria-label="Close Preview" class="absolute top-4 right-4 z-20 p-2 rounded-full bg-surface-container-high/90 text-on-surface hover:bg-secondary hover:text-white transition-colors" onclick="closeModal()">
+      <span class="material-symbols-outlined text-[20px]">close</span>
+    </button>
+    <div class="md:w-1/2 bg-surface-container-low p-8 flex items-center justify-center relative">
+      <img id="modalImg" class="w-full h-64 md:h-full object-contain mix-blend-multiply" src="assets/images/necklace.jpg" alt="Product View" />
+      <span class="absolute bottom-4 left-4 font-label-sm text-[11px] text-tertiary bg-surface-container-lowest/90 px-2.5 py-1 rounded">
+        BIS 916 Hallmarked Pure Gold
+      </span>
+    </div>
+    <div class="md:w-1/2 p-6 md:p-8 flex flex-col justify-between overflow-y-auto">
+      <div class="space-y-4">
+        <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 bg-primary-fixed text-on-primary-fixed rounded text-xs font-label-sm uppercase tracking-wider">
+          <span class="material-symbols-outlined text-[14px]">verified</span>
+          <span>Certified Royal Heirloom</span>
+        </div>
+        <h2 id="modalTitle" class="font-headline-sm text-headline-sm text-on-surface font-medium">Devi Royal Navratna Choker</h2>
+        <p id="modalPrice" class="font-headline-sm text-headline-md text-primary font-bold">₹4,20,000</p>
+        <div class="p-3.5 bg-surface-container-low rounded-lg space-y-1.5 text-xs font-body-sm">
+          <div class="flex justify-between">
+            <span class="text-tertiary">Gold Purity:</span>
+            <span class="text-on-surface font-semibold">22K (916) BIS Hallmarked</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="text-tertiary">Approx Weight:</span>
+            <span id="modalWeight" class="text-on-surface font-semibold">78.50g Pure Gold</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="text-tertiary">Craftsmanship:</span>
+            <span class="text-on-surface font-semibold">Handcrafted Royal Karigari</span>
+          </div>
+        </div>
+        <p id="modalDesc" class="font-body-sm text-on-surface-variant leading-relaxed">
+          Exquisite 22K pure gold handcrafted creation sculpted by generational karigars.
+        </p>
+        <p class="text-[11px] text-on-surface-variant/70 italic">
+          * Clearly identified sample product &amp; price until verified inventory.
+        </p>
+      </div>
+
+      <div class="pt-6 space-y-2.5">
+        <a id="modalWhatsAppBtn" href="https://wa.me/919426557390?text=Hello%20PRINCESS%20JEWELS%2C%20I%20am%20interested%20in%20this%20jewellery%20piece." target="_blank" rel="noopener noreferrer" class="w-full py-3.5 bg-gradient-to-r from-[#1E4D2B] to-[#2E7D32] text-white font-label-md uppercase tracking-[0.16em] rounded shadow hover:opacity-95 transition-opacity flex items-center justify-center gap-2">
+          <span class="material-symbols-outlined text-[18px]">chat</span>
+          <span>Enquire on WhatsApp</span>
+        </a>
+        <button id="modalAddToBagBtn" type="button" class="w-full py-3 bg-primary-container text-on-primary-container font-label-md uppercase tracking-[0.16em] rounded shadow hover:bg-secondary hover:text-on-secondary transition-colors flex items-center justify-center gap-2">
+          <span class="material-symbols-outlined text-[18px]">shopping_bag</span>
+          <span>Add to Jewellery Bag</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Floating Back to Top Button (UX Issue #2) -->
+<button id="backToTop" aria-label="Back to Top" class="fixed bottom-36 sm:bottom-28 right-5 z-40 w-10 h-10 rounded-full bg-primary-container text-on-primary-container shadow-xl hidden items-center justify-center hover:bg-primary hover:text-on-primary transition-all duration-300 group" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top">
+  <span class="material-symbols-outlined text-[18px] transition-transform group-hover:-translate-y-0.5">arrow_upward</span>
+</button>
+
+<!-- Floating Quick-Contact Widgets -->
+<aside aria-label="Quick Concierge Contact" class="fixed bottom-20 sm:bottom-8 right-5 z-40 flex flex-col items-end gap-3 pointer-events-auto">
+  <a href="tel:+919426557390" title="Call Concierge (+91 94265 57390)" class="floating-quick-btn w-12 h-12 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-2xl hover:bg-secondary transition-colors group relative">
+    <span class="material-symbols-outlined text-[24px]">call</span>
+    <span class="absolute right-14 bg-inverse-surface text-surface-bright font-label-sm text-[10px] uppercase tracking-wider py-1 px-2.5 rounded shadow-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+      Call: +91 94265 57390
+    </span>
+  </a>
+
+  <a href="https://wa.me/919426557390?text=Hello%20PRINCESS%20JEWELS%2C%20I%20am%20interested%20in%20your%20jewellery%20collections.%20Please%20share%20more%20details." target="_blank" rel="noopener noreferrer" title="Chat on WhatsApp" class="floating-quick-btn w-14 h-14 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow-2xl hover:bg-[#1EBE5D] transition-transform relative group">
+    <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24">
+      <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19.01L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.81 13.47 3.81 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.11 7.03C8.94 7.03 8.66 7.1 8.42 7.35C8.18 7.61 7.5 8.25 7.5 9.54C7.5 10.83 8.44 12.07 8.57 12.24C8.7 12.41 10.37 15.11 13 16.14C15.19 17 15.63 16.83 16.1 16.79C16.57 16.75 17.62 16.16 17.84 15.54C18.06 14.92 18.06 14.39 18 14.28C17.94 14.17 17.77 14.11 17.52 13.98C17.27 13.85 16.05 13.25 15.82 13.17C15.59 13.09 15.42 13.05 15.25 13.3C15.08 13.55 14.6 14.11 14.45 14.28C14.3 14.45 14.15 14.47 13.9 14.35C13.65 14.22 12.85 13.96 11.9 13.11C11.16 12.45 10.66 11.64 10.51 11.39C10.36 11.14 10.49 11 10.62 10.88C10.73 10.77 10.87 10.59 11 10.44C11.13 10.29 11.17 10.18 11.25 10.02C11.33 9.85 11.29 9.71 11.23 9.58C11.17 9.45 10.66 8.21 10.45 7.71C10.24 7.22 10.03 7.29 9.88 7.28C9.74 7.28 9.57 7.28 9.4 7.28L9.11 7.03Z"/>
+    </svg>
+    <span class="absolute right-16 bg-inverse-surface text-surface-bright font-label-sm text-[10px] uppercase tracking-wider py-1 px-2.5 rounded shadow-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+      WhatsApp Concierge
+    </span>
+  </a>
+</aside>
+
+<!-- Mobile Bottom Sticky Navigation (<768px) with Safe Area Inset -->
+<nav aria-label="Mobile Quick Actions" class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-surface-container-lowest/95 backdrop-blur-md border-t border-surface-container-high py-2 px-4 flex items-center justify-around shadow-[0_-4px_16px_rgba(0,0,0,0.06)]" style="padding-bottom: env(safe-area-inset-bottom, 16px);">
+  <a href="tel:+919426557390" class="flex flex-col items-center text-on-surface-variant hover:text-primary transition-colors">
+    <span class="material-symbols-outlined text-[20px]">call</span>
+    <span class="font-label-sm text-[9px] uppercase tracking-wider mt-0.5">Call</span>
+  </a>
+  <a href="https://wa.me/919426557390?text=Hello%20PRINCESS%20JEWELS%2C%20I%20am%20interested%20in%20your%20jewellery%20collections.%20Please%20share%20more%20details." target="_blank" rel="noopener noreferrer" class="flex flex-col items-center text-[#2E7D32]">
+    <span class="material-symbols-outlined text-[20px]">chat</span>
+    <span class="font-label-sm text-[9px] uppercase tracking-wider mt-0.5">WhatsApp</span>
+  </a>
+  <a href="products.html" class="flex flex-col items-center text-on-surface-variant hover:text-primary transition-colors">
+    <span class="material-symbols-outlined text-[20px]">diamond</span>
+    <span class="font-label-sm text-[9px] uppercase tracking-wider mt-0.5">Shop</span>
+  </a>
+  <a href="bridal.html" class="flex flex-col items-center text-on-surface-variant hover:text-primary transition-colors">
+    <span class="material-symbols-outlined text-[20px]">celebration</span>
+    <span class="font-label-sm text-[9px] uppercase tracking-wider mt-0.5">Bridal</span>
+  </a>
+  <button type="button" data-action="open-cart" class="relative flex flex-col items-center text-on-surface-variant hover:text-primary transition-colors bg-transparent border-0 cursor-pointer p-0">
+    <span class="material-symbols-outlined text-[20px]">shopping_bag</span>
+    <span class="cart-count-badge absolute -top-1 right-2 bg-primary-container text-on-primary-container font-label-sm text-[8px] w-3.5 h-3.5 rounded-full flex items-center justify-center font-bold">1</span>
+    <span class="font-label-sm text-[9px] uppercase tracking-wider mt-0.5">Bag</span>
+  </button>
+</nav>
+
+<script src="assets/script.js"></script>
+</body>
+</html>

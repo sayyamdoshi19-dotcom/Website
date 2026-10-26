@@ -1,0 +1,655 @@
+﻿<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-tertiary-container": "#4e3d00", "primary-fixed": "#d6e3fe", "primary-container": "#0e1c2f", "surface-container": "#f0eded", "error-container": "#ffdad6", "on-primary": "#ffffff", "border-gold-subtle": "rgba(197, 155, 39, 0.22)", "on-secondary-fixed": "#251a00", "tertiary": "#735c00", "surface-variant": "#e5e2e1", "charcoal-light": "#8E8E8E", "border-ivory": "rgba(229, 195, 101, 0.15)", "surface-cream": "#FFFDF8", "surface-container-highest": "#e5e2e1", "surface-dim": "#dcd9d9", "on-secondary-container": "#735700", "on-secondary-fixed-variant": "#5a4300", "on-background": "#1b1b1c", "error": "#ba1a1a", "border-gold-strong": "#C59B27", "background": "#fcf9f8", "surface-tint": "#525f75", "surface-container-high": "#eae7e7", "surface-container-low": "#f6f3f2", "on-primary-fixed": "#0e1c2f", "on-primary-container": "#77849c", "on-tertiary-fixed-variant": "#574500", "gold-antique": "#9B761E", "surface-container-lowest": "#ffffff", "on-primary-fixed-variant": "#3a475c", "navy-deep": "#071220", "surface": "#fcf9f8", "on-surface-variant": "#44474c", "on-error-container": "#93000a", "inverse-primary": "#bac7e1", "primary-fixed-dim": "#bac7e1", "on-secondary": "#ffffff", "secondary-fixed": "#ffdf98", "primary": "#000000", "secondary": "#775a00", "inverse-on-surface": "#f3f0ef", "gold-light": "#E5C365", "surface-sand": "#F5EFEB", "on-surface": "#1b1b1c", "on-tertiary-fixed": "#241a00", "secondary-fixed-dim": "#eec14b", "outline": "#75777d", "surface-ivory": "#FBF8F2", "outline-variant": "#c5c6cd", "tertiary-container": "#cba72f", "tertiary-fixed-dim": "#e9c349", "navy-subtle": "#0F2038", "hallmark-green": "#2E7D32", "inverse-surface": "#303030", "on-tertiary": "#ffffff", "charcoal-muted": "#686868", "surface-bright": "#fcf9f8", "secondary-container": "#fece57", "on-error": "#ffffff", "tertiary-fixed": "#ffe088" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "space-xs": "0.375rem", "space-3xl": "3rem", "margin-desktop": "3rem", "space-2xl": "2.25rem", "space-xl": "1.5rem", "space-md": "0.75rem", "space-2xs": "0.25rem", "space-sm": "0.5rem", "gutter-desktop": "1.5rem", "gutter": "0.75rem", "space-lg": "1rem", "margin": "1rem" }, fontFamily: { "headline-xl": ["Playfair Display"], "body-lg": ["Plus Jakarta Sans"], "headline-xl-mobile": ["Playfair Display"], "label-caps": ["Plus Jakarta Sans"], "headline-sm": ["Playfair Display"], "title-editorial": ["Playfair Display"], "caption": ["Plus Jakarta Sans"], "headline-md": ["Playfair Display"], "body-md": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "headline-lg": ["Playfair Display"], "price-md": ["Plus Jakarta Sans"], "price-lg": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Playfair Display"] }, fontSize: { "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "26px", "fontWeight": "400" }], "headline-xl-mobile": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-caps": ["11px", { "lineHeight": "16px", "letterSpacing": "0.12em", "fontWeight": "600" }], "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "500" }], "title-editorial": ["15px", { "lineHeight": "22px", "letterSpacing": "0.08em", "fontWeight": "600" }], "caption": ["11px", { "lineHeight": "16px", "fontWeight": "400" }], "headline-md": ["22px", { "lineHeight": "28px", "fontWeight": "500" }], "body-md": ["14px", { "lineHeight": "22px", "fontWeight": "400" }], "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }], "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "600" }], "price-md": ["16px", { "lineHeight": "22px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "price-lg": ["20px", { "lineHeight": "26px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-lg-mobile": ["24px", { "lineHeight": "32px", "fontWeight": "600" }] } } } };</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style></head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 inset-x-0 z-50 bg-surface-cream/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(11,25,44,0.05)] pt-safe"><div class="h-20 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-xs"><img alt="Indriya Logo" class="h-8 w-auto object-contain" src="assets/images/catalog/stitch_img_41.jpg"/><div class="flex flex-col"><span class="font-title-editorial text-title-editorial text-navy-deep tracking-wider uppercase leading-none">Indriya</span><span class="font-label-caps text-label-caps text-gold-antique uppercase leading-none mt-space-2xs">Aditya Birla</span></div></div><div class="hidden xs:flex items-center gap-space-2xs px-space-xs py-space-2xs rounded-full bg-surface-sand shadow-[0_1px_4px_rgba(197,155,39,0.12)]"><span class="material-symbols-outlined text-[15px] text-gold-antique">auto_awesome</span><span class="font-label-caps text-label-caps text-navy-deep">22kt: ₹13,535/g</span></div><div class="flex items-center gap-space-2xs"><button aria-label="Search" class="w-11 h-11 flex items-center justify-center text-navy-deep transition-colors"><span class="material-symbols-outlined text-[22px]">search</span></button><button aria-label="Wishlist" class="w-11 h-11 flex items-center justify-center text-navy-deep transition-colors relative"><span class="material-symbols-outlined text-[22px]">favorite</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-gold-antique"></span></button><button aria-label="Bag" class="w-11 h-11 flex items-center justify-center text-navy-deep transition-colors"><span class="material-symbols-outlined text-[22px]">shopping_bag</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-space-2xs shadow-[0_2px_6px_rgba(11,25,44,0.15)]"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div><div class="xs:hidden px-margin pb-space-xs flex justify-center"><div class="inline-flex items-center gap-space-2xs px-space-sm py-space-2xs rounded-full bg-surface-sand shadow-[0_1px_4px_rgba(197,155,39,0.12)]"><span class="material-symbols-outlined text-[14px] text-gold-antique">auto_awesome</span><span class="font-label-caps text-label-caps text-navy-deep">Today 22kt: ₹13,535/g</span></div></div></header><main class="flex flex-col relative w-full pt-20 pb-24 bg-surface"><div class="flex flex-col w-full">
+<!-- Live Gold Rate & Festive Bulletin Ticker -->
+<div class="w-full bg-navy-deep text-on-primary py-space-xs px-margin flex items-center justify-between shadow-[0_2px_8px_rgba(7,18,32,0.15)]">
+<div class="flex items-center gap-space-xs overflow-hidden">
+<span class="inline-flex items-center justify-center w-2 h-2 rounded-full bg-gold-light animate-ping"></span>
+<span class="font-label-caps text-label-caps text-gold-light uppercase tracking-widest whitespace-nowrap">Live Market</span>
+<span class="font-body-sm text-body-sm text-surface-sand whitespace-nowrap font-medium">22KT Gold: ₹13,535/gm</span>
+</div>
+<div class="hidden sm:flex items-center gap-space-xs">
+<span class="font-caption text-caption text-gold-light">Up to 30% off making charges*</span>
+</div>
+<a class="font-label-caps text-label-caps text-gold-antique bg-surface-sand/10 px-space-xs py-space-2xs rounded-full hover:bg-surface-sand/20 transition-all flex items-center gap-space-2xs" href="#exchange-calculator">
+<span>0% Exchange</span>
+<span class="material-symbols-outlined text-[13px]">arrow_forward</span>
+</a>
+</div>
+<!-- Hero Banner: Royal Bridal Masterpiece -->
+<section class="relative w-full bg-navy-subtle text-on-primary overflow-hidden">
+<div class="relative w-full h-[460px] flex flex-col justify-end p-margin pb-space-2xl bg-cover bg-center" data-alt="High-fashion Indian royal bridal portrait illuminated with warm candlelight, showcasing a magnificent heirloom 22 karat gold necklace with ruby accents, matching earrings, and uncut diamonds. Dark sapphire navy fabric backdrop with regal Indian palace architecture softly blurred, warm amber highlights, and exquisite craftsmanship detail." style="background-image: url('assets/images/catalog/stitch_img_42.jpg')">
+<!-- Vignette and Gradient Overlay for serene readability -->
+<div class="absolute inset-0 bg-gradient-to-t from-navy-deep via-navy-deep/60 to-transparent"></div>
+<div class="relative z-10 flex flex-col gap-space-sm max-w-sm">
+<div class="inline-flex items-center gap-space-2xs px-space-sm py-space-2xs rounded-full bg-surface-sand/15 backdrop-blur-md w-max shadow-sm">
+<span class="material-symbols-outlined text-[14px] text-gold-light">diamond</span>
+<span class="font-label-caps text-label-caps text-gold-light uppercase">The Solitaire &amp; Bridal Pavilion</span>
+</div>
+<h1 class="font-headline-xl-mobile text-headline-xl-mobile text-surface-cream leading-tight">
+          Every Jewel Tells a Story
+        </h1>
+<p class="font-body-sm text-body-sm text-surface-sand/90 line-clamp-2">
+          Step into an imperial realm of certified gold, uncut polki, and luminous diamonds, crafted with endless devotion by the House of Birla.
+        </p>
+<div class="flex items-center gap-space-sm pt-space-xs">
+<a class="px-space-md py-space-sm bg-gold-antique text-surface-cream rounded-lg font-body-sm text-body-sm font-semibold shadow-[0_4px_14px_rgba(155,118,30,0.35)] flex items-center gap-space-2xs transition-transform active:scale-95" href="#featured-padmika">
+<span>Explore Bridal Edit</span>
+<span class="material-symbols-outlined text-[16px]">north_east</span>
+</a>
+<a class="px-space-md py-space-sm bg-surface-cream/15 backdrop-blur-md text-surface-cream rounded-lg font-body-sm text-body-sm font-medium hover:bg-surface-cream/25 transition-all" href="#store-locator">
+            Book Atelier
+          </a>
+</div>
+</div>
+</div>
+</section>
+<!-- Curated Quick Category Pills -->
+<section class="py-space-xl bg-surface-cream">
+<div class="px-margin flex items-center justify-between mb-space-md">
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-gold-antique uppercase">Curated Catalog</span>
+<h2 class="font-headline-sm text-headline-sm text-navy-deep">Explore by Category</h2>
+</div>
+<a class="font-label-caps text-label-caps text-gold-antique font-semibold flex items-center gap-space-2xs" href="#">
+        View All <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</a>
+</div>
+<!-- Category Horizontal Scroll Tray -->
+<div class="flex gap-space-md overflow-x-auto px-margin pb-space-xs no-scrollbar">
+<!-- Item 1: Earrings -->
+<a class="flex flex-col items-center gap-space-xs min-w-[72px] group" href="#">
+<div class="w-16 h-16 rounded-full bg-surface-sand p-1 shadow-sm transition-transform group-active:scale-95 overflow-hidden flex items-center justify-center">
+<img class="w-full h-full object-cover rounded-full" data-alt="Traditional Indian jhumka earring in 22KT gold adorned with delicate pearl drops and rubies, captured on a plush ivory velvet plinth with soft directional luxury lighting." src="assets/images/catalog/stitch_img_43.jpg"/>
+</div>
+<span class="font-body-sm text-body-sm text-navy-deep font-medium group-hover:text-gold-antique text-center">Earrings</span>
+</a>
+<!-- Item 2: Necklaces -->
+<a class="flex flex-col items-center gap-space-xs min-w-[72px] group" href="#">
+<div class="w-16 h-16 rounded-full bg-surface-sand p-1 shadow-sm transition-transform group-active:scale-95 overflow-hidden flex items-center justify-center">
+<img class="w-full h-full object-cover rounded-full" data-alt="Exquisite royal Indian gold choker necklace featuring intricately carved temple peacock motifs and fine kundan work on cream silk backdrop." src="assets/images/catalog/stitch_img_44.jpg"/>
+</div>
+<span class="font-body-sm text-body-sm text-navy-deep font-medium group-hover:text-gold-antique text-center">Necklaces</span>
+</a>
+<!-- Item 3: Bangles -->
+<a class="flex flex-col items-center gap-space-xs min-w-[72px] group" href="#">
+<div class="w-16 h-16 rounded-full bg-surface-sand p-1 shadow-sm transition-transform group-active:scale-95 overflow-hidden flex items-center justify-center">
+<img class="w-full h-full object-cover rounded-full" data-alt="Handcrafted traditional gold kada bangle with floral filigree engravings and subtle enamel detailing, isolated on a warm sand background." src="assets/images/catalog/stitch_img_45.jpg"/>
+</div>
+<span class="font-body-sm text-body-sm text-navy-deep font-medium group-hover:text-gold-antique text-center">Bangles</span>
+</a>
+<!-- Item 4: Rings -->
+<a class="flex flex-col items-center gap-space-xs min-w-[72px] group" href="#">
+<div class="w-16 h-16 rounded-full bg-surface-sand p-1 shadow-sm transition-transform group-active:scale-95 overflow-hidden flex items-center justify-center">
+<img class="w-full h-full object-cover rounded-full" data-alt="Brilliant diamond cocktail ring set in 18KT yellow gold with faceted emerald centerpiece, resting on textured ivory stone." src="assets/images/catalog/stitch_img_46.jpg"/>
+</div>
+<span class="font-body-sm text-body-sm text-navy-deep font-medium group-hover:text-gold-antique text-center">Rings</span>
+</a>
+<!-- Item 5: Mangalsutra -->
+<a class="flex flex-col items-center gap-space-xs min-w-[72px] group" href="#">
+<div class="w-16 h-16 rounded-full bg-surface-sand p-1 shadow-sm transition-transform group-active:scale-95 overflow-hidden flex items-center justify-center">
+<img class="w-full h-full object-cover rounded-full" data-alt="Contemporary diamond auspicious mangalsutra pendant crafted in 18KT gold with delicate black auspicious beads against pale beige linen." src="assets/images/catalog/stitch_img_47.jpg"/>
+</div>
+<span class="font-body-sm text-body-sm text-navy-deep font-medium group-hover:text-gold-antique text-center">Mangalsutra</span>
+</a>
+<!-- Item 6: Polki -->
+<a class="flex flex-col items-center gap-space-xs min-w-[72px] group" href="#">
+<div class="w-16 h-16 rounded-full bg-surface-sand p-1 shadow-sm transition-transform group-active:scale-95 overflow-hidden flex items-center justify-center">
+<img class="w-full h-full object-cover rounded-full" data-alt="Regal uncut polki diamond set with meenakari reverse work, sparkling delicately on deep royal navy silk cushion." src="assets/images/catalog/stitch_img_48.jpg"/>
+</div>
+<span class="font-body-sm text-body-sm text-navy-deep font-medium group-hover:text-gold-antique text-center">Polki</span>
+</a>
+<!-- Item 7: Gold Coins -->
+<a class="flex flex-col items-center gap-space-xs min-w-[72px] group" href="#">
+<div class="w-16 h-16 rounded-full bg-surface-sand p-1 shadow-sm transition-transform group-active:scale-95 overflow-hidden flex items-center justify-center">
+<img class="w-full h-full object-cover rounded-full" data-alt="24 Karat 999 pure gold investment coin embossed with Goddess Lakshmi seated on a lotus, gleaming brilliantly on white marble." src="assets/images/catalog/stitch_img_49.jpg"/>
+</div>
+<span class="font-body-sm text-body-sm text-navy-deep font-medium group-hover:text-gold-antique text-center">Gold Coins</span>
+</a>
+</div>
+</section>
+<!-- Featured Signature Collection: Padmika -->
+<section class="py-space-xl bg-surface-sand/40" id="featured-padmika">
+<div class="px-margin mb-space-md flex flex-col gap-space-2xs">
+<div class="flex items-center gap-space-xs">
+<span class="w-6 h-[1px] bg-gold-antique"></span>
+<span class="font-label-caps text-label-caps text-gold-antique uppercase tracking-widest">Featured Collection</span>
+</div>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-navy-deep">Padmika Masterpieces</h2>
+<p class="font-body-sm text-body-sm text-charcoal-muted">
+        Inspired by the auspicious lotus, immortalized in sculpted 22KT antique gold and glowing rubies.
+      </p>
+</div>
+<!-- 2-Up Product Cards Grid -->
+<div class="grid grid-cols-2 gap-gutter px-margin">
+<!-- Product 1 -->
+<div class="flex flex-col bg-surface-cream rounded-xl p-space-sm shadow-[0_4px_16px_rgba(197,155,39,0.06)] relative group">
+<button aria-label="Add to Wishlist" class="absolute top-3 right-3 z-10 w-8 h-8 rounded-full bg-surface-cream/80 backdrop-blur-sm flex items-center justify-center text-navy-deep hover:text-gold-antique transition-colors">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+<div class="relative w-full aspect-square rounded-lg bg-surface-sand overflow-hidden mb-space-xs flex items-center justify-center">
+<img class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" data-alt="The Sindhuja Blessings Gold Necklace in 22KT hallmarked gold, displaying tiered lotus petal carvings with cabochon ruby insets, shot in dramatic high luxury editorial lighting on stone plinth." src="assets/images/catalog/stitch_img_50.jpg"/>
+<div class="absolute bottom-2 left-2 px-space-2xs py-[2px] bg-navy-deep/80 backdrop-blur-xs rounded text-[10px] text-surface-cream font-medium">
+            22KT Pure
+          </div>
+</div>
+<div class="flex items-center gap-1 mb-1">
+<span class="w-1.5 h-1.5 rounded-full bg-hallmark-green"></span>
+<span class="font-label-caps text-[9px] text-charcoal-muted uppercase">BIS 916 Hallmark</span>
+</div>
+<h3 class="font-body-sm text-body-sm font-medium text-navy-deep truncate">Sindhuja Blessings Necklace</h3>
+<p class="font-caption text-caption text-charcoal-light truncate mb-space-2xs">Antique finish • 36.4 g</p>
+<div class="mt-auto flex items-center justify-between pt-space-2xs">
+<span class="font-price-md text-price-md text-navy-deep">₹2,58,900</span>
+<button aria-label="Add to bag" class="w-8 h-8 rounded-lg bg-navy-deep text-on-primary flex items-center justify-center hover:bg-gold-antique transition-colors">
+<span class="material-symbols-outlined text-[16px]">shopping_bag</span>
+</button>
+</div>
+</div>
+<!-- Product 2 -->
+<div class="flex flex-col bg-surface-cream rounded-xl p-space-sm shadow-[0_4px_16px_rgba(197,155,39,0.06)] relative group">
+<button aria-label="Add to Wishlist" class="absolute top-3 right-3 z-10 w-8 h-8 rounded-full bg-surface-cream/80 backdrop-blur-sm flex items-center justify-center text-navy-deep hover:text-gold-antique transition-colors">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+<div class="relative w-full aspect-square rounded-lg bg-surface-sand overflow-hidden mb-space-xs flex items-center justify-center">
+<img class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" data-alt="Mahashri Padma Gold Bangle with layered 3D lotus bloom filigree and glowing textured gold finish, styled on beige silk drapery." src="assets/images/catalog/stitch_img_51.jpg"/>
+<div class="absolute bottom-2 left-2 px-space-2xs py-[2px] bg-navy-deep/80 backdrop-blur-xs rounded text-[10px] text-surface-cream font-medium">
+            22KT Pure
+          </div>
+</div>
+<div class="flex items-center gap-1 mb-1">
+<span class="w-1.5 h-1.5 rounded-full bg-hallmark-green"></span>
+<span class="font-label-caps text-[9px] text-charcoal-muted uppercase">BIS 916 Hallmark</span>
+</div>
+<h3 class="font-body-sm text-body-sm font-medium text-navy-deep truncate">Mahashri Padma Bangle</h3>
+<p class="font-caption text-caption text-charcoal-light truncate mb-space-2xs">Kada clasp • 21.8 g</p>
+<div class="mt-auto flex items-center justify-between pt-space-2xs">
+<span class="font-price-md text-price-md text-navy-deep">₹1,42,500</span>
+<button aria-label="Add to bag" class="w-8 h-8 rounded-lg bg-navy-deep text-on-primary flex items-center justify-center hover:bg-gold-antique transition-colors">
+<span class="material-symbols-outlined text-[16px]">shopping_bag</span>
+</button>
+</div>
+</div>
+<!-- Product 3 -->
+<div class="flex flex-col bg-surface-cream rounded-xl p-space-sm shadow-[0_4px_16px_rgba(197,155,39,0.06)] relative group">
+<button aria-label="Add to Wishlist" class="absolute top-3 right-3 z-10 w-8 h-8 rounded-full bg-surface-cream/80 backdrop-blur-sm flex items-center justify-center text-navy-deep hover:text-gold-antique transition-colors">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+<div class="relative w-full aspect-square rounded-lg bg-surface-sand overflow-hidden mb-space-xs flex items-center justify-center">
+<img class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" data-alt="Gajalakshmi Padmavati Gold Short Necklace showing imperial elephant and sacred goddess motifs in rich 22KT gold relief against an amber velvet tray." src="assets/images/catalog/stitch_img_52.jpg"/>
+<div class="absolute bottom-2 left-2 px-space-2xs py-[2px] bg-navy-deep/80 backdrop-blur-xs rounded text-[10px] text-surface-cream font-medium">
+            22KT Pure
+          </div>
+</div>
+<div class="flex items-center gap-1 mb-1">
+<span class="w-1.5 h-1.5 rounded-full bg-hallmark-green"></span>
+<span class="font-label-caps text-[9px] text-charcoal-muted uppercase">BIS 916 Hallmark</span>
+</div>
+<h3 class="font-body-sm text-body-sm font-medium text-navy-deep truncate">Gajalakshmi Padmavati Necklace</h3>
+<p class="font-caption text-caption text-charcoal-light truncate mb-space-2xs">Temple design • 26.1 g</p>
+<div class="mt-auto flex items-center justify-between pt-space-2xs">
+<span class="font-price-md text-price-md text-navy-deep">₹1,88,200</span>
+<button aria-label="Add to bag" class="w-8 h-8 rounded-lg bg-navy-deep text-on-primary flex items-center justify-center hover:bg-gold-antique transition-colors">
+<span class="material-symbols-outlined text-[16px]">shopping_bag</span>
+</button>
+</div>
+</div>
+<!-- Product 4 -->
+<div class="flex flex-col bg-surface-cream rounded-xl p-space-sm shadow-[0_4px_16px_rgba(197,155,39,0.06)] relative group">
+<button aria-label="Add to Wishlist" class="absolute top-3 right-3 z-10 w-8 h-8 rounded-full bg-surface-cream/80 backdrop-blur-sm flex items-center justify-center text-navy-deep hover:text-gold-antique transition-colors">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+<div class="relative w-full aspect-square rounded-lg bg-surface-sand overflow-hidden mb-space-xs flex items-center justify-center">
+<img class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" data-alt="Pranavi Gold Drop Earrings intricately crafted with cascading lotus bell bells and delicate pearl drops in 22 karat gold against silk backdrop." src="assets/images/catalog/stitch_img_53.jpg"/>
+<div class="absolute bottom-2 left-2 px-space-2xs py-[2px] bg-navy-deep/80 backdrop-blur-xs rounded text-[10px] text-surface-cream font-medium">
+            22KT Pure
+          </div>
+</div>
+<div class="flex items-center gap-1 mb-1">
+<span class="w-1.5 h-1.5 rounded-full bg-hallmark-green"></span>
+<span class="font-label-caps text-[9px] text-charcoal-muted uppercase">BIS 916 Hallmark</span>
+</div>
+<h3 class="font-body-sm text-body-sm font-medium text-navy-deep truncate">Pranavi Gold Drop Earrings</h3>
+<p class="font-caption text-caption text-charcoal-light truncate mb-space-2xs">Pair • 9.2 g</p>
+<div class="mt-auto flex items-center justify-between pt-space-2xs">
+<span class="font-price-md text-price-md text-navy-deep">₹64,500</span>
+<button aria-label="Add to bag" class="w-8 h-8 rounded-lg bg-navy-deep text-on-primary flex items-center justify-center hover:bg-gold-antique transition-colors">
+<span class="material-symbols-outlined text-[16px]">shopping_bag</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Collection Banner Link -->
+<div class="px-margin mt-space-lg">
+<div class="w-full bg-navy-deep text-surface-cream p-space-md rounded-xl flex items-center justify-between shadow-md">
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-gold-light uppercase">Bridal Trousseau</span>
+<span class="font-headline-sm text-headline-sm text-surface-cream">Discover Padmika Suite</span>
+</div>
+<a class="px-space-md py-space-xs bg-gold-antique text-surface-cream font-body-sm text-body-sm rounded-lg font-medium flex items-center gap-space-2xs" href="#">
+          View All <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Shop by Karatage Module -->
+<section class="py-space-xl bg-surface-cream">
+<div class="px-margin mb-space-md">
+<span class="font-label-caps text-label-caps text-gold-antique uppercase">Pure Metallurgy</span>
+<h2 class="font-headline-md text-headline-md text-navy-deep">Designs by Karat</h2>
+<p class="font-body-sm text-body-sm text-charcoal-muted">From delicate everyday adornments to heirloom 24kt bullion.</p>
+</div>
+<div class="grid grid-cols-2 gap-gutter px-margin">
+<!-- 14KT Card -->
+<a class="p-space-md rounded-xl bg-surface-ivory shadow-[0_2px_10px_rgba(11,25,44,0.04)] flex flex-col justify-between h-36 group" href="#">
+<div>
+<span class="font-headline-md text-headline-md text-navy-deep group-hover:text-gold-antique transition-colors">14KT</span>
+<p class="font-body-sm text-body-sm text-charcoal-muted mt-1 leading-snug">Crafted for everyday ease and contemporary workwear.</p>
+</div>
+<div class="flex items-center text-gold-antique font-label-caps text-label-caps font-semibold gap-1">
+          Explore 14KT <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</div>
+</a>
+<!-- 18KT Card -->
+<a class="p-space-md rounded-xl bg-surface-ivory shadow-[0_2px_10px_rgba(11,25,44,0.04)] flex flex-col justify-between h-36 group" href="#">
+<div>
+<span class="font-headline-md text-headline-md text-navy-deep group-hover:text-gold-antique transition-colors">18KT</span>
+<p class="font-body-sm text-body-sm text-charcoal-muted mt-1 leading-snug">Made for diamonds, modern solitaires &amp; life milestones.</p>
+</div>
+<div class="flex items-center text-gold-antique font-label-caps text-label-caps font-semibold gap-1">
+          Explore 18KT <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</div>
+</a>
+<!-- 22KT Card -->
+<a class="p-space-md rounded-xl bg-surface-ivory shadow-[0_2px_10px_rgba(11,25,44,0.04)] flex flex-col justify-between h-36 group" href="#">
+<div>
+<span class="font-headline-md text-headline-md text-navy-deep group-hover:text-gold-antique transition-colors">22KT</span>
+<p class="font-body-sm text-body-sm text-charcoal-muted mt-1 leading-snug">Rooted in ancient tradition for grand bridal celebrations.</p>
+</div>
+<div class="flex items-center text-gold-antique font-label-caps text-label-caps font-semibold gap-1">
+          Explore 22KT <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</div>
+</a>
+<!-- 24KT Card -->
+<a class="p-space-md rounded-xl bg-surface-ivory shadow-[0_2px_10px_rgba(11,25,44,0.04)] flex flex-col justify-between h-36 group" href="#">
+<div>
+<span class="font-headline-md text-headline-md text-navy-deep group-hover:text-gold-antique transition-colors">24KT</span>
+<p class="font-body-sm text-body-sm text-charcoal-muted mt-1 leading-snug">Timeless pure 999 gold coins, bars and sacred bullion.</p>
+</div>
+<div class="flex items-center text-gold-antique font-label-caps text-label-caps font-semibold gap-1">
+          Explore 24KT <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</div>
+</a>
+</div>
+</section>
+<!-- Curated Occasions Jharokha Grid -->
+<section class="py-space-xl bg-surface-sand/30">
+<div class="px-margin mb-space-md flex flex-col items-center text-center">
+<span class="font-label-caps text-label-caps text-gold-antique uppercase tracking-widest">Bridal Calendar</span>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-navy-deep">Jewellery for Every Occasion</h2>
+<p class="font-body-sm text-body-sm text-charcoal-muted mt-space-2xs max-w-xs">
+        Harmonized adornments curated for each sacred wedding ceremony.
+      </p>
+</div>
+<!-- Horizontal scroll of festive occasions with arched aesthetics -->
+<div class="flex gap-space-md overflow-x-auto px-margin pb-space-sm no-scrollbar">
+<!-- Engagement Card -->
+<div class="min-w-[200px] flex flex-col rounded-xl overflow-hidden bg-surface-cream shadow-sm group">
+<div class="relative w-full h-48 bg-cover bg-center" data-alt="Graceful bride showcasing sparkling solitaire engagement ring and diamond lariat necklace under soft romantic golden hour light." style="background-image: url('assets/images/catalog/stitch_img_54.jpg')">
+<div class="absolute inset-0 bg-gradient-to-t from-navy-deep/80 via-transparent to-transparent"></div>
+<span class="absolute bottom-3 left-3 font-title-editorial text-title-editorial text-surface-cream">Engagement</span>
+</div>
+<div class="p-space-sm flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-charcoal-muted">Solitaires &amp; Bands</span>
+<span class="material-symbols-outlined text-[18px] text-gold-antique">east</span>
+</div>
+</div>
+<!-- Sangeet Card -->
+<div class="min-w-[200px] flex flex-col rounded-xl overflow-hidden bg-surface-cream shadow-sm group">
+<div class="relative w-full h-48 bg-cover bg-center" data-alt="Indian bride dressed in emerald green lehenga adorned with swinging gold chandbalis and multi-strand polki necklace in festive dance movement." style="background-image: url('assets/images/catalog/stitch_img_55.jpg')">
+<div class="absolute inset-0 bg-gradient-to-t from-navy-deep/80 via-transparent to-transparent"></div>
+<span class="absolute bottom-3 left-3 font-title-editorial text-title-editorial text-surface-cream">Sangeet Night</span>
+</div>
+<div class="p-space-sm flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-charcoal-muted">Chandbalis &amp; Chokers</span>
+<span class="material-symbols-outlined text-[18px] text-gold-antique">east</span>
+</div>
+</div>
+<!-- Mehendi Card -->
+<div class="min-w-[200px] flex flex-col rounded-xl overflow-hidden bg-surface-cream shadow-sm group">
+<div class="relative w-full h-48 bg-cover bg-center" data-alt="Henna-adorned bridal palms wearing delicate 22 karat gold haathphool and floral gold bracelets in a bright sunny courtyard garden." style="background-image: url('assets/images/catalog/stitch_img_56.jpg')">
+<div class="absolute inset-0 bg-gradient-to-t from-navy-deep/80 via-transparent to-transparent"></div>
+<span class="absolute bottom-3 left-3 font-title-editorial text-title-editorial text-surface-cream">Mehendi</span>
+</div>
+<div class="p-space-sm flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-charcoal-muted">Haathphool &amp; Kada</span>
+<span class="material-symbols-outlined text-[18px] text-gold-antique">east</span>
+</div>
+</div>
+<!-- Wedding Day Card -->
+<div class="min-w-[200px] flex flex-col rounded-xl overflow-hidden bg-surface-cream shadow-sm group">
+<div class="relative w-full h-48 bg-cover bg-center" data-alt="Traditional Indian bride wearing majestic red silk sari adorned with heavy 22KT antique gold bridal haar necklace, maang tikka, and regal nath." style="background-image: url('assets/images/catalog/stitch_img_57.jpg')">
+<div class="absolute inset-0 bg-gradient-to-t from-navy-deep/80 via-transparent to-transparent"></div>
+<span class="absolute bottom-3 left-3 font-title-editorial text-title-editorial text-surface-cream">Wedding Day</span>
+</div>
+<div class="p-space-sm flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-charcoal-muted">Heirloom Rani Haar</span>
+<span class="material-symbols-outlined text-[18px] text-gold-antique">east</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Old Gold Exchange Calculator -->
+<section class="py-space-2xl bg-surface-cream" id="exchange-calculator">
+<div class="px-margin">
+<div class="bg-navy-deep text-on-primary rounded-2xl p-space-lg shadow-[0_10px_30px_rgba(7,18,32,0.25)] relative overflow-hidden">
+<!-- Subtle gold ornamental halo -->
+<div class="absolute -right-10 -bottom-10 w-44 h-44 rounded-full bg-gold-antique/10 blur-2xl pointer-events-none"></div>
+<div class="flex items-center gap-space-2xs mb-space-xs">
+<span class="material-symbols-outlined text-gold-light text-[18px]">currency_exchange</span>
+<span class="font-label-caps text-label-caps text-gold-light uppercase tracking-wider">Exchange Guarantee</span>
+</div>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-surface-cream mb-space-xs">
+          Turn Old Gold into Modern Grandeur
+        </h2>
+<p class="font-body-sm text-body-sm text-surface-sand/80 mb-space-lg">
+          0% deduction on gold exchange across any karatage. Test and verify your gold with German Karatmeters at our ateliers.
+        </p>
+<!-- Calculator Card Form -->
+<div class="bg-surface-cream text-navy-deep p-space-md rounded-xl flex flex-col gap-space-md shadow-sm">
+<!-- Weight Input -->
+<div class="flex flex-col gap-space-2xs">
+<label class="font-label-caps text-label-caps text-charcoal-muted uppercase" for="gold-weight">Weight of Old Gold</label>
+<div class="flex items-center bg-surface-sand/50 rounded-lg px-space-sm h-11">
+<input class="w-full bg-transparent font-headline-sm text-headline-sm text-navy-deep outline-none focus:ring-0" id="gold-weight" placeholder="0" type="number" value="15"/>
+<span class="font-body-sm text-body-sm text-charcoal-muted font-medium ml-2">grams</span>
+</div>
+</div>
+<!-- Purity Selector -->
+<div class="flex flex-col gap-space-2xs">
+<label class="font-label-caps text-label-caps text-charcoal-muted uppercase" for="gold-purity">Select Karat Purity</label>
+<div class="relative">
+<select class="w-full h-11 appearance-none bg-surface-sand/50 rounded-lg px-space-sm font-body-sm text-body-sm text-navy-deep outline-none focus:ring-1 focus:ring-gold-antique" id="gold-purity">
+<option selected="" value="13535">22KT Gold (91.6% Pure) - ₹13,535/g</option>
+<option value="14760">24KT Bullion (99.9% Pure) - ₹14,760/g</option>
+<option value="11075">18KT Gold (75.0% Pure) - ₹11,075/g</option>
+<option value="8615">14KT Gold (58.5% Pure) - ₹8,615/g</option>
+</select>
+<span class="material-symbols-outlined text-[18px] text-navy-deep absolute right-3 top-3 pointer-events-none">expand_more</span>
+</div>
+</div>
+<!-- Estimated Value Output Panel -->
+<div class="p-space-sm rounded-lg bg-surface-sand/60 flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-caption text-caption text-charcoal-muted">Estimated Exchange Value</span>
+<span class="font-price-lg text-price-lg text-gold-antique" id="calculated-val">₹2,03,025</span>
+</div>
+<div class="flex flex-col items-end">
+<span class="px-space-xs py-0.5 rounded-full bg-hallmark-green/15 text-hallmark-green font-label-caps text-[10px] uppercase font-bold">0% Deducted</span>
+<span class="font-caption text-[10px] text-charcoal-light mt-0.5">*Store testing applies</span>
+</div>
+</div>
+<!-- CTA Button -->
+<button class="w-full h-12 bg-navy-deep text-on-primary rounded-lg font-body-sm text-body-sm font-semibold hover:bg-navy-subtle active:scale-[0.99] transition-transform flex items-center justify-center gap-space-xs" id="btn-lock-rate">
+<span>Book Gold Evaluation at Store</span>
+<span class="material-symbols-outlined text-[18px]">calendar_today</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Regional Bridal Suites Carousel -->
+<section class="py-space-xl bg-surface-ivory">
+<div class="px-margin mb-space-md">
+<span class="font-label-caps text-label-caps text-gold-antique uppercase">Heritage Tapestry</span>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-navy-deep">Regional Bridal Suites</h2>
+<p class="font-body-sm text-body-sm text-charcoal-muted">Honoring sacred bridal traditions of India’s cultural landscapes.</p>
+</div>
+<!-- Editorial Story Carousel -->
+<div class="px-margin flex flex-col gap-space-lg">
+<!-- Story 1: Anantara (Temple Divinity) -->
+<div class="bg-surface-cream rounded-2xl overflow-hidden shadow-[0_4px_16px_rgba(11,25,44,0.05)]">
+<div class="relative w-full h-60 bg-cover bg-center" data-alt="South Indian bride dressed in luminous Kanjeevaram silk saree adorned with the Anantara 22KT antique temple gold collection depicting cosmic Vishnu and Lakshmi sculptures in golden sunlight." style="background-image: url('assets/images/catalog/stitch_img_58.jpg')">
+<div class="absolute inset-0 bg-gradient-to-t from-navy-deep/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-3 left-4 right-4 flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-surface-cream">Anantara Temple Suite</span>
+<span class="px-space-xs py-space-2xs rounded-full bg-surface-cream/20 backdrop-blur-md text-surface-cream font-label-caps text-label-caps uppercase">South India</span>
+</div>
+</div>
+<div class="p-space-md flex flex-col gap-space-xs">
+<p class="font-body-sm text-body-sm text-charcoal-muted">
+            Be the bride of your dreams draped in 22KT gold carrying stories of Vishnu’s cosmic balance and Goddess Lakshmi’s grace across three tiers of temple majesty.
+          </p>
+<a class="font-body-sm text-body-sm font-semibold text-gold-antique flex items-center gap-space-2xs mt-space-2xs" href="#">
+            Discover Anantara Collection <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Story 2: Madhuragini (Bihar Madhubani Craft) -->
+<div class="bg-surface-cream rounded-2xl overflow-hidden shadow-[0_4px_16px_rgba(11,25,44,0.05)]">
+<div class="relative w-full h-60 bg-cover bg-center" data-alt="Bride adorned in Madhuragini heirloom gold jewelry inspired by sacred Madhubani folklore with Ram and Sita motifs, accented by deep vermillion bridal silk." style="background-image: url('assets/images/catalog/stitch_img_59.jpg')">
+<div class="absolute inset-0 bg-gradient-to-t from-navy-deep/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-3 left-4 right-4 flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-surface-cream">Madhuragini Suite</span>
+<span class="px-space-xs py-space-2xs rounded-full bg-surface-cream/20 backdrop-blur-md text-surface-cream font-label-caps text-label-caps uppercase">Bihar Heritage</span>
+</div>
+</div>
+<div class="p-space-md flex flex-col gap-space-xs">
+<p class="font-body-sm text-body-sm text-charcoal-muted">
+            Woven with the divine union of Lord Ram and Sita, celebrating sacred Madhubani artwork translated into intricately layered gold filigree.
+          </p>
+<a class="font-body-sm text-body-sm font-semibold text-gold-antique flex items-center gap-space-2xs mt-space-2xs" href="#">
+            Discover Madhuragini Collection <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- The Indriya Promises (Trust Pillars) -->
+<section class="py-space-xl bg-surface-sand/50">
+<div class="px-margin mb-space-lg text-center">
+<span class="font-label-caps text-label-caps text-gold-antique uppercase tracking-widest">The Aditya Birla Legacy</span>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-navy-deep">The Indriya Promises</h2>
+</div>
+<div class="px-margin flex flex-col gap-space-md">
+<!-- Promise 1 -->
+<div class="p-space-md bg-surface-cream rounded-xl shadow-sm flex items-start gap-space-md">
+<div class="w-12 h-12 rounded-full bg-surface-sand flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px] text-gold-antique">verified</span>
+</div>
+<div class="flex flex-col">
+<h3 class="font-headline-sm text-headline-sm text-navy-deep">Trusted &amp; Certified Jewellery</h3>
+<p class="font-body-sm text-body-sm text-charcoal-muted mt-space-2xs">
+            Every creation features BIS Hallmark 916 gold and natural diamonds independently certified by IGI &amp; GIA.
+          </p>
+</div>
+</div>
+<!-- Promise 2 -->
+<div class="p-space-md bg-surface-cream rounded-xl shadow-sm flex items-start gap-space-md">
+<div class="w-12 h-12 rounded-full bg-surface-sand flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px] text-gold-antique">receipt_long</span>
+</div>
+<div class="flex flex-col">
+<h3 class="font-headline-sm text-headline-sm text-navy-deep">Fair &amp; Transparent Pricing</h3>
+<p class="font-body-sm text-body-sm text-charcoal-muted mt-space-2xs">
+            Complete honesty with line-by-line itemized breakdowns of gold weight, stones, and true making charges.
+          </p>
+</div>
+</div>
+<!-- Promise 3 -->
+<div class="p-space-md bg-surface-cream rounded-xl shadow-sm flex items-start gap-space-md">
+<div class="w-12 h-12 rounded-full bg-surface-sand flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px] text-gold-antique">autorenew</span>
+</div>
+<div class="flex flex-col">
+<h3 class="font-headline-sm text-headline-sm text-navy-deep">Hassle-Free Lifetime Buyback</h3>
+<p class="font-body-sm text-body-sm text-charcoal-muted mt-space-2xs">
+            No-questions-asked exchange guarantee and lifetime buyback privileges at prevailing market rates.
+          </p>
+</div>
+</div>
+<!-- Promise 4 -->
+<div class="p-space-md bg-surface-cream rounded-xl shadow-sm flex items-start gap-space-md">
+<div class="w-12 h-12 rounded-full bg-surface-sand flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px] text-gold-antique">security</span>
+</div>
+<div class="flex flex-col">
+<h3 class="font-headline-sm text-headline-sm text-navy-deep">1-Year Warranty &amp; Care</h3>
+<p class="font-body-sm text-body-sm text-charcoal-muted mt-space-2xs">
+            Comprehensive annual protection plus complimentary cleaning, ultrasonic polishing, and prong inspections.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Store Locator & City Pills -->
+<section class="py-space-2xl bg-surface-cream" id="store-locator">
+<div class="px-margin mb-space-md">
+<span class="font-label-caps text-label-caps text-gold-antique uppercase">Experience Indriya</span>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-navy-deep">Find an Atelier in Your City</h2>
+<p class="font-body-sm text-body-sm text-charcoal-muted">Walk into our sensorial boutiques for private bridal styling and high tea.</p>
+</div>
+<!-- Search Input -->
+<div class="px-margin mb-space-md">
+<div class="flex items-center h-12 bg-surface-sand/70 rounded-xl px-space-sm gap-space-xs shadow-inner">
+<span class="material-symbols-outlined text-[20px] text-charcoal-muted">location_on</span>
+<input class="w-full bg-transparent font-body-sm text-body-sm text-navy-deep outline-none placeholder:text-charcoal-light" placeholder="Search city, pincode, or street..." type="text"/>
+<button aria-label="Find Atelier" class="w-8 h-8 rounded-lg bg-navy-deep text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Quick City Pills Carousel -->
+<div class="flex gap-space-xs overflow-x-auto px-margin pb-space-xs no-scrollbar">
+<button class="px-space-md py-space-xs rounded-full bg-navy-deep text-surface-cream font-label-caps text-label-caps whitespace-nowrap shadow-sm">Delhi NCR (8)</button>
+<button class="px-space-md py-space-xs rounded-full bg-surface-sand text-navy-deep font-label-caps text-label-caps whitespace-nowrap">Mumbai (6)</button>
+<button class="px-space-md py-space-xs rounded-full bg-surface-sand text-navy-deep font-label-caps text-label-caps whitespace-nowrap">Bengaluru (5)</button>
+<button class="px-space-md py-space-xs rounded-full bg-surface-sand text-navy-deep font-label-caps text-label-caps whitespace-nowrap">Jaipur (3)</button>
+<button class="px-space-md py-space-xs rounded-full bg-surface-sand text-navy-deep font-label-caps text-label-caps whitespace-nowrap">Hyderabad (4)</button>
+<button class="px-space-md py-space-xs rounded-full bg-surface-sand text-navy-deep font-label-caps text-label-caps whitespace-nowrap">Kolkata (3)</button>
+</div>
+<!-- Featured Flagship Store Card -->
+<div class="px-margin mt-space-md">
+<div class="bg-surface-ivory rounded-xl p-space-md shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-gold-antique uppercase font-bold">Flagship Boutique</span>
+<span class="inline-flex items-center gap-1 text-[11px] text-hallmark-green font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-hallmark-green"></span> Open until 8:30 PM
+          </span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-navy-deep">Indriya Worli Flagship Atelier</h3>
+<p class="font-body-sm text-body-sm text-charcoal-muted">
+          A-1, Aditya Birla Centre, S.K. Ahire Marg, Worli, Mumbai 400030
+        </p>
+<div class="flex items-center gap-space-sm pt-space-xs">
+<a class="px-space-sm py-space-xs rounded-lg bg-navy-deep text-surface-cream font-body-sm text-body-sm flex items-center gap-1" href="tel:18002108383">
+<span class="material-symbols-outlined text-[16px]">call</span> Call Atelier
+          </a>
+<button class="px-space-sm py-space-xs rounded-lg bg-surface-cream text-navy-deep font-body-sm text-body-sm shadow-xs flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">directions</span> Navigate
+          </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Editorial Blog Spotlight -->
+<section class="py-space-xl bg-surface-sand/30">
+<div class="px-margin mb-space-md flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-gold-antique uppercase">Jewels of Wisdom</span>
+<h2 class="font-headline-sm text-headline-sm text-navy-deep">The Indriya Chronicle</h2>
+</div>
+<a class="font-label-caps text-label-caps text-gold-antique font-semibold" href="#">View All</a>
+</div>
+<div class="px-margin flex flex-col gap-space-md">
+<a class="flex gap-space-sm bg-surface-cream rounded-xl p-space-sm shadow-xs group" href="#">
+<div class="w-24 h-24 rounded-lg bg-cover bg-center shrink-0 overflow-hidden" data-alt="Jewelry styling flatlay showcasing gold jewelry care with microfiber cloth, velvet jewelry case, and heirloom necklaces." style="background-image: url('assets/images/catalog/stitch_img_60.jpg')"></div>
+<div class="flex flex-col justify-center min-w-0">
+<span class="font-label-caps text-[10px] text-gold-antique uppercase">Bridal Guide</span>
+<h3 class="font-body-sm text-body-sm font-semibold text-navy-deep line-clamp-2 group-hover:text-gold-antique transition-colors">
+            How to Care for Your Bridal Jewellery Before and After the Wedding
+          </h3>
+<span class="font-caption text-caption text-charcoal-light mt-1">4 min read</span>
+</div>
+</a>
+<a class="flex gap-space-sm bg-surface-cream rounded-xl p-space-sm shadow-xs group" href="#">
+<div class="w-24 h-24 rounded-lg bg-cover bg-center shrink-0 overflow-hidden" data-alt="Bridal portrait illustrating jewelry harmony with high necklines and heavy traditional necklaces." style="background-image: url('assets/images/catalog/stitch_img_61.jpg')"></div>
+<div class="flex flex-col justify-center min-w-0">
+<span class="font-label-caps text-[10px] text-gold-antique uppercase">Stylist Advice</span>
+<h3 class="font-body-sm text-body-sm font-semibold text-navy-deep line-clamp-2 group-hover:text-gold-antique transition-colors">
+            How to Choose Wedding Jewellery that Complements Your Bridal Silhouette
+          </h3>
+<span class="font-caption text-caption text-charcoal-light mt-1">5 min read</span>
+</div>
+</a>
+</div>
+</section>
+<!-- VIP Concierge Newsletter & Birla Seal -->
+<section class="py-space-2xl bg-navy-deep text-on-primary text-center px-margin relative overflow-hidden">
+<div class="relative z-10 flex flex-col items-center max-w-sm mx-auto">
+<span class="material-symbols-outlined text-[32px] text-gold-light mb-space-2xs">auto_awesome</span>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-surface-cream">
+        More Beautiful Moments Await
+      </h2>
+<p class="font-body-sm text-body-sm text-surface-sand/80 mt-space-xs mb-space-md">
+        Subscribe to receive private invitations to high jewelry viewings, bespoke bridal consultations, and gold rate alerts.
+      </p>
+<form class="w-full flex flex-col gap-space-xs" id="newsletter-form">
+<div class="flex bg-surface-cream rounded-lg overflow-hidden p-1 shadow-sm">
+<input class="w-full bg-transparent px-space-sm font-body-sm text-body-sm text-navy-deep outline-none" placeholder="Enter your email address" required="" type="email"/>
+<button class="px-space-md py-space-xs bg-gold-antique text-surface-cream font-label-caps text-label-caps uppercase font-bold rounded hover:bg-gold-light transition-colors" type="submit">
+            Join
+          </button>
+</div>
+<span class="font-caption text-[11px] text-surface-sand/60">An Aditya Birla Group Luxury Initiative • Complete Discretion Guaranteed</span>
+</form>
+</div>
+</section>
+<!-- Interactive JavaScript for Live Gold Exchange Calculator & Interactions -->
+<script>
+    (function initExchangeCalculator() {
+      const weightInput = document.getElementById('gold-weight');
+      const puritySelect = document.getElementById('gold-purity');
+      const calculatedVal = document.getElementById('calculated-val');
+      const lockRateBtn = document.getElementById('btn-lock-rate');
+
+      function updateCalculation() {
+        if (!weightInput || !puritySelect || !calculatedVal) return;
+        const weight = parseFloat(weightInput.value) || 0;
+        const ratePerGram = parseFloat(puritySelect.value) || 0;
+        const total = Math.round(weight * ratePerGram);
+        calculatedVal.textContent = '₹' + total.toLocaleString('en-IN');
+      }
+
+      if (weightInput) weightInput.addEventListener('input', updateCalculation);
+      if (puritySelect) puritySelect.addEventListener('change', updateCalculation);
+
+      if (lockRateBtn) {
+        lockRateBtn.addEventListener('click', function() {
+          const originalText = lockRateBtn.innerHTML;
+          lockRateBtn.innerHTML = '<span class="material-symbols-outlined text-[18px] animate-spin">progress_activity</span> Locking Rate...';
+          setTimeout(function() {
+            lockRateBtn.innerHTML = '<span class="material-symbols-outlined text-[18px]">check_circle</span> Appointment Booked!';
+            setTimeout(function() {
+              lockRateBtn.innerHTML = originalText;
+            }, 2500);
+          }, 800);
+        });
+      }
+
+      const newsletterForm = document.getElementById('newsletter-form');
+      if (newsletterForm) {
+        newsletterForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          const submitBtn = newsletterForm.querySelector('button[type="submit"]');
+          if (submitBtn) {
+            submitBtn.textContent = 'Welcome';
+            submitBtn.classList.remove('bg-gold-antique');
+            submitBtn.classList.add('bg-hallmark-green');
+          }
+        });
+      }
+    })();
+  </script>
+</div></main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface-ivory/95 backdrop-blur-xl shadow-[0_-4px_20px_rgba(11,25,44,0.06)]" data-active-classes="text-gold-antique font-semibold"><div class="flex justify-around items-center h-16 px-space-xs"><a class="flex flex-col items-center justify-center gap-space-2xs w-16 h-14 text-charcoal-muted transition-colors" data-path="explore-home" href="#"><span class="material-symbols-outlined text-[22px]">home</span><span class="font-caption text-caption text-center">Explore</span></a><a class="flex flex-col items-center justify-center gap-space-2xs w-16 h-14 text-charcoal-muted transition-colors" data-path="collections" href="#"><span class="material-symbols-outlined text-[22px]">diamond</span><span class="font-caption text-caption text-center">Collections</span></a><a class="flex flex-col items-center justify-center gap-space-2xs w-16 h-14 text-charcoal-muted transition-colors" data-path="gold-rate-exchange" href="#"><span class="material-symbols-outlined text-[22px]">currency_rupee</span><span class="font-caption text-caption text-center">Gold Rate</span></a><a class="flex flex-col items-center justify-center gap-space-2xs w-16 h-14 text-charcoal-muted transition-colors" data-path="stores" href="#"><span class="material-symbols-outlined text-[22px]">storefront</span><span class="font-caption text-caption text-center">Stores</span></a><a class="flex flex-col items-center justify-center gap-space-2xs w-16 h-14 text-charcoal-muted transition-colors" data-path="account" href="#"><span class="material-symbols-outlined text-[22px]">account_circle</span><span class="font-caption text-caption text-center">Account</span></a></div></nav></body></html>
