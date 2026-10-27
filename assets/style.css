@@ -1,0 +1,88 @@
+/* ==========================================================================
+   PRINCESS JEWELS — HAUTE JOAILLERIE DESIGN SYSTEM
+   Theme: Imperial Gold & Ivory Haute Joaillerie (Google Stitch Specification)
+   Colors: Royal Gold (#C6A15B / #775A1A), Burgundy (#914852), Ivory (#FFF8F6)
+   Typography: Playfair Display & Inter
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
+
+:root {
+  --pj-gold-primary: #775a1a;
+  --pj-gold-container: #c6a15b;
+  --pj-gold-light: #e9c178;
+  --pj-gold-fixed: #ffdea5;
+  --pj-burgundy: #914852;
+  --pj-burgundy-dark: #4a101c;
+  --pj-surface: #fff8f6;
+  --pj-surface-card: #ffffff;
+  --pj-surface-low: #f9f2f0;
+  --pj-surface-high: #ede7e5;
+  --pj-text-main: #1d1b1a;
+  --pj-text-muted: #4e4639;
+  --pj-dark-surface: #32302f;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #f9f2f0;
+}
+::-webkit-scrollbar-thumb {
+  background: #c6a15b;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #775a1a;
+}
+
+/* Hero Slideshow Transitions */
+.hero-slide {
+  transition: opacity 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.hero-bg-img {
+  transition: transform 6000ms cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Shimmer Gold Effect */
+.gold-shimmer {
+  background: linear-gradient(135deg, #dfc07a 0%, #c6a15b 50%, #9f7b33 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Hairline Gold Borders */
+.border-gold-hairline {
+  border: 1px solid rgba(198, 161, 91, 0.35);
+}
+
+/* Ambient Amber Shadow */
+.shadow-ambient-gold {
+  box-shadow: 0 16px 36px -8px rgba(74, 16, 28, 0.05), 0 4px 16px -2px rgba(198, 161, 91, 0.12);
+}
+
+/* Floating Quick Buttons */
+.floating-quick-btn {
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.2), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+.floating-quick-btn:hover {
+  transform: translateY(-4px) scale(1.04);
+}
+
+/* Accordion Smooth Height */
+.accordion-content {
+  transition: max-height 0.35s cubic-bezier(0, 1, 0, 1);
+}
+
+/* Mobile Quick Navigation Sticky Bar Safe Area */
+@media (max-width: 768px) {
+  .mobile-bottom-bar,
+  nav[aria-label="Mobile Quick Actions"] {
+    padding-bottom: env(safe-area-inset-bottom, 16px);
+  }
+}
